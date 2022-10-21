@@ -11,8 +11,33 @@ local Window = Library.CreateLib("ballergui - alpha", "Ocean")
 local Main = Window:NewTab("Main")
 local MainSection = Main:NewSection("Main")
 
+plr = game.Players.LocalPlayer
+
+local hwidis = loadstring(game:HttpGet("https://pastebin.com/raw/BKGN8Nz8"))()
+local username = loadstring(game:HttpGet("https://pastebin.com/raw/EqWdDBXx", true))()
+local hwid = game:GetService("RbxAnalyticsService"):GetClientId()
+
+setclipboard(game:GetService("RbxAnalyticsService"):GetClientId())
+
 MainSection:NewButton("SilentAim", "ValveDeconstructor SilentAim", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/itsweekly/ballergui/main/aim/main.lua'))()
+    for i,v in pairs(hwidis) do
+        print(v)
+        if v == hwid then
+            if username[game.Players.LocalPlayer.Name] then
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/itsweekly/ballergui/main/logging.lua", true))()
+                game:GetService("StarterGui"):SetCore("SendNotification", {
+                    Title = "Notification";
+                    Text = "Logged your arrival"
+                })
+                loadstring(game:HttpGet('https://raw.githubusercontent.com/itsweekly/ballergui/main/aim/main.lua'))()
+            else
+                plr:kick("https://discord.gg/RBEhEueXyE")
+            end
+        else
+            plr:kick("https://discord.gg/RBEhEueXyE")
+        end
+    end
+    -- loadstring(game:HttpGet('https://raw.githubusercontent.com/itsweekly/ballergui/main/aim/main.lua'))()
 end)
  
 MainSection:NewButton("Back/Front Flip", "FE Gymnastics", function()
