@@ -10,10 +10,16 @@ local Window = Library.CreateLib("ballergui - alpha", "Ocean")
 -- MAIN
 local Main = Window:NewTab("Main")
 local MainSection = Main:NewSection("Main")
+
+MainSection:NewButton("SilentAim", "ValveDeconstructor SilentAim", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/itsweekly/ballergui/main/aim/main.lua'))()
+end)
  
 MainSection:NewButton("Back/Front Flip", "FE Gymnastics", function()
     loadstring(game:HttpGet('https://pastebin.com/raw/7wDcPtLk'))()
 end)
+
+-- https://raw.githubusercontent.com/itsweekly/ballergui/main/aim/main.lua
 
 MainSection:NewToggle("SuperPower", "Jump and Go Fast", function(state)
     if state then
