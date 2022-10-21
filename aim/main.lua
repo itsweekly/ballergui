@@ -1,6 +1,6 @@
 --[[ Credits to Stefanuk12 ]]--
 
-local Aiming = loadstring(game:HttpGet('https://raw.githubusercontent.com/itsweekly/staraimv2/main/old/aim/aim.lua'))()
+local Aiming = loadstring(game:HttpGet('https://raw.githubusercontent.com/itsweekly/ballergui/main/aim/aim.lua'))()
 Aiming.TeamCheck(false)
 
 -- // Services
