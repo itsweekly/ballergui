@@ -31,10 +31,10 @@ MainSection:NewButton("SilentAim", "ValveDeconstructor SilentAim", function()
                 })
                 loadstring(game:HttpGet('https://raw.githubusercontent.com/itsweekly/ballergui/main/aim/main.lua'))()
             else
-                plr:kick("https://discord.gg/RBEhEueXyE")
+                plr:kick("This is the only feature thats payed ; https://discord.gg/RBEhEueXyE")
             end
         else
-            plr:kick("https://discord.gg/RBEhEueXyE")
+            plr:kick("This is the only feature thats payed ; https://discord.gg/RBEhEueXyE")
         end
     end
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/itsweekly/ballergui/main/aim/main.lua'))()
