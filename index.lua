@@ -46,8 +46,9 @@ PlayerSection:NewTextBox("Enter Key", "Enter Authentication Key", function(txt)
             print( 'Special Powers are not loaded!' )
             plr:kick( 'Authentication Key is incorrect' )
         end
-    end
-end)
+    end)
+end
+
 
 
 
