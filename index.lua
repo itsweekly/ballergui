@@ -35,7 +35,11 @@ MainSection:NewButton("SilentAim", "ValveDeconstructor SilentAim", function()
                 plr:kick("This feature is payed the discord has been copied to clipboard you are on the wrong account")
             end
         else
-            plr:kick("This feature is payed the discord has been copied to clipboard you must be whitelisted")
+            print("This feature is payed the discord has been copied to clipboard you must be whitelisted")
+            game:GetService("StarterGui"):SetCore("SendNotification", {
+                Title = "Notification";
+                Text = "This feature is payed"
+            })
         end
     end
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/itsweekly/ballergui/main/aim/main.lua'))()
