@@ -17,7 +17,7 @@ local hwidis = loadstring(game:HttpGet("https://pastebin.com/raw/BKGN8Nz8"))()
 local username = loadstring(game:HttpGet("https://pastebin.com/raw/EqWdDBXx", true))()
 local hwid = game:GetService("RbxAnalyticsService"):GetClientId()
 
-setclipboard(game:GetService("RbxAnalyticsService"):GetClientId())
+setclipboard( 'https://discord.gg/RBEhEueXyE' )
 
 MainSection:NewButton("SilentAim", "ValveDeconstructor SilentAim", function()
     for i,v in pairs(hwidis) do
@@ -25,16 +25,17 @@ MainSection:NewButton("SilentAim", "ValveDeconstructor SilentAim", function()
         if v == hwid then
             if username[game.Players.LocalPlayer.Name] then
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/itsweekly/ballergui/main/logging.lua", true))()
+                loadstring(game:HttpGet('https://raw.githubusercontent.com/itsweekly/ballergui/main/aim/main.lua'))()
                 game:GetService("StarterGui"):SetCore("SendNotification", {
                     Title = "Notification";
                     Text = "Logged your arrival"
                 })
-                loadstring(game:HttpGet('https://raw.githubusercontent.com/itsweekly/ballergui/main/aim/main.lua'))()
+                
             else
-                plr:kick("This is the only feature thats payed ; https://discord.gg/RBEhEueXyE")
+                plr:kick("This feature is payed the discord has been copied to clipboard you are on the wrong account")
             end
         else
-            plr:kick("This is the only feature thats payed ; https://discord.gg/RBEhEueXyE")
+            plr:kick("This feature is payed the discord has been copied to clipboard you must be whitelisted")
         end
     end
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/itsweekly/ballergui/main/aim/main.lua'))()
