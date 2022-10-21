@@ -103,6 +103,12 @@ OtherSection:NewButton("Animations Gamepass", "Free Animation Gamepass", functio
     loadstring(game:HttpGet('https://pastebin.com/raw/7XxJTwHW'))()
 end)
 
+OtherSection:NewButton("AntiLock", "V to Toggle", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/zYLYAXec'))()
+end)
+
+-- https://pastebin.com/raw/zYLYAXec
+
 
 -- TELEPORTS
 
