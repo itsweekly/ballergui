@@ -1,53 +1,108 @@
 game:GetService("StarterGui"):SetCore("SendNotification", {
     Title = "Notification";
-    Text = "Raven Hub!"
+    Text = "ballergui"
 })
-
-plr = game.Players.LocalPlayer
 
 wait(2)
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Raven Hub", "Ocean")
+local Window = Library.CreateLib("ballergui - alpha", "Ocean")
 
--- home
-local Home = Window:NewTab("Home")
-local HomeSection = Home:NewSection("Credits")
-HomeSection:NewLabel("Made By Tyrel Batutuy")
-HomeSection:NewLabel("Raven Hub")
-HomeSection:NewButton("Copy Hardware ID", "Copies your Hardware ID", function(v)
-    setclipboard(game:GetService("RbxAnalyticsService"):GetClientId())
+-- MAIN
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Main")
+ 
+MainSection:NewButton("Back/Front Flip", "FE Gymnastics", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/7wDcPtLk'))()
 end)
 
-_G.Key = 'Sj,(x(h=sX8X)81]g|WVm-XVk^!8`bZCet@yCZ./MbITITp"ou]^Lem9c=Y,52}'
-_G.ADKEY = 'RQ#O"!kx4n3]>U3GRPq,77Tk?Cz!0,q^m,6THKxcRtsl(QDa]/%|26t!I(z|USj'
+MainSection:NewToggle("SuperPower", "Jump and Go Fast", function(state)
+    if state then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 120
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 120
+    else
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    end
+end)
 
--- Player
+MainSection:NewButton("Anti/Afk", "Bypasses Roblox from Kicking you out", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/7fZDkJWb'))()
+end)
+
+MainSection:NewButton("Infinite Yiff", "Loads Infinite Yiff", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+-- LOCAL PLAYER
+
 local Player = Window:NewTab("Player")
 local PlayerSection = Player:NewSection("Player")
-PlayerSection:NewTextBox("Enter Key", "Enter Authentication Key", function(txt)
-	if (txt) == _G.Key then
-        game:GetService("StarterGui"):SetCore("SendNotification", {
-            Title = "Notification";
-            Text = "Loaded!"
-        })
-    else
-        if (txt) == _G.ADKEY then
-            game:GetService("StarterGui"):SetCore("SendNotification", {
-                Title = "Notification";
-                Text = "Special Powers!"
-            })
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/itsweekly/ballergui/main/httpbin.lua", true))()
-            if _G.Security = true then
-                print( 'Hardware ID and USER authorised' )
-            else
-                plr:kick( 'Sadly us have a Hardware Identification system' )
-            end
-        else
-            print( 'Special Powers are not loaded!' )
-            plr:kick( 'Authentication Key is incorrect' )
-        end
-    end)
-end
+
+PlayerSection:NewSlider("WalkSpeed", "Speed", 500, 16, function(s) -- 500 (MaxValue) 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+PlayerSection:NewSlider("Jumpower", "Jump", 350, 50, function(s) -- 500 (MaxValue) 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+PlayerSection:NewButton("Reset WS/JP", "Defaults", function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+end)
+
+-- OTHER
+
+local Other = Window:NewTab("Other")
+local OtherSection = Other:NewSection("Other")
+
+OtherSection:NewButton("Chat Spoofer", "Pretends you are other people", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/djBfk8Li'))()
+end)
+
+OtherSection:NewButton("SwagMode Fly", "Fly taken Directly from SwagMode", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/5YpM8ney'))()
+end)
+
+OtherSection:NewButton("LoraX", "Has one of the best Autofarms", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/itsweekly/ballergui/main/lorax.lua'))()
+end)
+
+OtherSection:NewButton("Animations Gamepass", "Free Animation Gamepass", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/7XxJTwHW'))()
+end)
+
+
+-- TELEPORTS
+
+local Teleports = Window:NewTab("Teleports")
+local TeleportsSection = Teleports:NewSection("Teleports")
+
+TeleportsSection:NewButton("Bank", "Teleports", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-437.125885, 38.9783134, -285.587372, 0.0165725499, 5.298579e-08, -0.99986279, 1.16139711e-08, 1, 5.31855591e-08, 0.99986279, -1.24937944e-08, 0.0165725499)
+end)
+
+TeleportsSection:NewButton("Sewer", "Teleports", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(111.514938, -26.7500305, -276.918365, -0.997865558, -1.25138016e-08, -0.0653034225, -1.74378947e-08, 1, 7.48333733e-08, 0.0653034225, 7.58124159e-08, -0.997865558)
+    
+end)
+
+TeleportsSection:NewButton("UFO", "Teleports", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(71.7331619, 139, -691.154419, 0.602706313, 7.78292178e-06, 0.797962964, 7.63640458e-07, 1, -1.03302691e-05, -0.797962964, 6.83547478e-06, 0.602706313)
+    
+end)
+
+TeleportsSection:NewButton("SafeZone1", "Teleports", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-117.270287, -58.7000618, 146.536087, 0.999873519, 5.21876942e-08, -0.0159031227, -5.22713037e-08, 1, -4.84179008e-09, 0.0159031227, 5.67245495e-09, 0.999873519)
+    
+end)
+
+TeleportsSection:NewButton("SafeZone2", "Teleports", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(207.48085, 38.25, 200014.953, 0.507315397, 0, -0.861760437, 0, 1, 0, 0.861760437, 0, 0.507315397)
+    
+end)
+
+
 
 
 
