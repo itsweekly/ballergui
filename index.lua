@@ -40,7 +40,7 @@ MainSection:NewButton("SilentAim", "ValveDeconstructor SilentAim", function()
     -- loadstring(game:HttpGet('https://raw.githubusercontent.com/itsweekly/ballergui/main/aim/main.lua'))()
 end)
  
-MainSection:NewButton("Back/Front Flip", "FE Gymnastics", function()
+MainSection:NewButton("Back/Front Flip", "Toggle Z,X,C", function()
     loadstring(game:HttpGet('https://pastebin.com/raw/7wDcPtLk'))()
 end)
 
@@ -91,7 +91,7 @@ OtherSection:NewButton("Chat Spoofer", "Pretends you are other people", function
     loadstring(game:HttpGet('https://pastebin.com/raw/djBfk8Li'))()
 end)
 
-OtherSection:NewButton("SwagMode Fly", "Fly taken Directly from SwagMode", function()
+OtherSection:NewButton("SwagMode Fly", "Toggle X", function()
     loadstring(game:HttpGet('https://pastebin.com/raw/5YpM8ney'))()
 end)
 
